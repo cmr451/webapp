@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<table border="1px">
+	</tr>
+		{% for i in range %}
+			{% if i|divisibleby:'20' %}
+				<td>{{i}}</td></tr>
+			
+			{% else %}
+				<td>{{i}}</td>
+			{% endif %}		
+		{% endfor %}
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+{% extends 'base.html'%}
+{% block content %}
+	<h1>Entradas del Blog</h1>
+	<form action="{% url 'entradas' %}" method="post" >
+		
+		<input type="submit" name="guardar" />
+		{% csrf_token %}
+		{{form2.as_p}}
+
+	</form>
+	
+	{% for entrada in entradas %}
+		<h2>{{entrada.titular}}</h2>
+		<p>{{entrada.contenido}}</p>
+	{% endfor %}
+{% endblock %}
+	

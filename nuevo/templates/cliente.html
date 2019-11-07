@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% block content %}
+
+	<form action="{% url 'cliente' %}" method="get" accept-charset="utf-8">
+	
+		
+		<input type="submit" name="guardar" />
+		{% csrf_token %}
+		{{form}}
+
+	</form>
+
+		{{nombres}}
+
+	<h1>clientess</h1>
+	<ul>
+		{% for cliente in cliente %}
+			<li>{{cliente}}</li>
+		{% endfor %}
+	</ul>
+{% endblock %}
