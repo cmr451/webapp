@@ -9,5 +9,5 @@ def registro(request):
 	return render(request,'registro.html')
 
 def faltantes(request):
-	return render(request, 'faltantes.html')
+	return render(request, 'falta.html')
 
